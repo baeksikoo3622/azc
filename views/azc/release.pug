@@ -1,0 +1,26 @@
+extends layout
+
+block title
+  title BN - Service
+
+block content
+  .main
+    p.titleMsg "한번의 클릭으로 회의 참여";
+    p.titleMsg_En "One Click to Connection On the Meeting"
+    br
+    br
+    br
+    .images
+      p.subMsg Make Your Confortable Meeting with AZC
+      p
+        a.download_btn_1(href='/release/1.4.0/auto_zoom_connector_1.4.0.zip' download) DOWNLOAD NOW
+      img.screen(src='/images/1.png' alt='screenImg')
+      img.icon(src='/images/logo.png' alt='icon')
+  .main3
+    p.titleMsg(style="text-align: center;") "Beta 1.4V"
+    span.subMsg3(style="text-align: center;") UI 디자인이 
+      span.subMsg3(style="color:black;") 대폭 상향
+      span.subMsg3 된 AZC를 만나보세요!
+    br
+    p
+      a.download_btn.bg_white(href='/release/1.4.0/auto_zoom_connector_1.4.0.zip' downloads) AZC 1.4 다운로드

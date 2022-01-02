@@ -1,0 +1,56 @@
+extends layout
+
+block title
+  title BN - Baeksikoo Network
+
+block content
+  .main
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    .images
+      img.screen3(src='./images/3.jpg' alt='screenImg')
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    p.titleMsg "업무 및 학업에 필요한 프로그램 개발사"
+    p.titleMsg_En "A program developer necessary for work and study"
+    br
+    br
+    br
+    p.descriptionMsg Baeksikoo Network는 일상생활에서의 업무, 학업에 편리함을 주는 프로그램들을 개발하고 있습니다 
+    p.descriptionMsg electron, nodejs 등과 같은 가벼운 언어로 제작된 우리의 서비스들은
+    p.descriptionMsg 편리함을 추구할 뿐만 아니라 대부분의 컴퓨터에서 돌아갈 수 있도록 설계했습니다.
+  .main2
+    .main2_margin
+      p.titleMsg.right.dodgerblue "줌 수동 연결이 불편하세요?"
+      br
+      div 
+        p.titleMsg.right(style="font-size:25px") 
+          span.dodgerblue 쉽고 빠른
+          span Auto Zoom Connector과 함께
+        p.titleMsg.right(style="font-size:25px") 
+          span.dodgerblue 간편한 줌 연결
+          span 을 체험해보세요!
+        p.titleMsg.right(style="font-size:25px") 지금 다운로드 할수 있습니다.
+      .images2 
+        p.subMsg2 Latest Version BETA 1.4
+        img.screen2(src='./images/2.png' alt='screenImg')
+        p
+          a.download_btn_2(href='./release/1.4.0/auto_zoom_connector_1.4.0.zip' download) DOWNLOAD NOW
+  .main3
+    span(style="font-size:45px;") BN - 
+      span(style="color:black;") Baeksikoo Network
+    br
+    p
+      a.download_btn.bg_white(href='/service') 지금 서비스를 둘러보세요

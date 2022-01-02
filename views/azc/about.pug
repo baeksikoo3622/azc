@@ -1,0 +1,36 @@
+extends layout
+
+block title
+  title AZC - about
+
+block content
+  .main
+    p.titleMsg "한번의 클릭으로 회의 참여";
+    p.titleMsg_En "One Click to Connection On the Meeting"
+    br
+    br
+    br
+    .images
+      p.subMsg Make Your Confortable Meeting with AZC
+      p
+        a.download_btn_1(href='/release/1.4.0/auto_zoom_connector_1.4.0.zip' download) DOWNLOAD NOW
+      img.screen(src='/images/1.png' alt='screenImg')
+      img.icon(src='/images/logo.png' alt='icon')
+  .main2
+    .main2_margin
+      .images 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tlxR39o6cpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      p.titleMsg.right.dodgerblue "줌 수동연결이 불편하세요?"
+      br
+      pre.titleMsg.right(style="font-size:20px")
+        | Auto Zoom Connector은 매우 간편한 자동 줌 연결 프로그램입니다
+        | 비밀번호와 줌주소, 그리고 회의 이름을 저장해 놓으면
+        | 비밀번호 복사 및 줌 자동 연결, 회의 참여까지
+        | 쉽게 온라인 업무를 진행할 수 있습니다.
+  .main3
+    span(style="font-size: 45px;") AZC - Auto 
+      span(style="color:black;") Zoom 
+      span Connector
+    br
+    p
+      a.download_btn.bg_white(href='/release/1.4.0/auto_zoom_connector_1.4.0.zip' download) 지금 다운로드하세요

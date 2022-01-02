@@ -1,0 +1,42 @@
+extends layout
+
+block title
+  title AZC - home
+
+block content
+  .main
+    p.titleMsg "한번의 클릭으로 회의 참여";
+    p.titleMsg_En "One Click to Connection On the Meeting"
+    br
+    br
+    br
+    .images
+      p.subMsg Make Your Confortable Meeting with AZC
+      p
+        a.download_btn_1(href='/release/1.4.0/auto_zoom_connector_1.4.0.zip' download) DOWNLOAD NOW
+      img.screen(src='/images/1.png' alt='screenImg')
+      img.icon(src='/images/logo.png' alt='icon')
+  .main2
+    .main2_margin
+      p.titleMsg.right.dodgerblue "가벼운 용량, 가벼운 무게"
+      br
+      div 
+        p.titleMsg.right(style="font-size:25px") 
+          span.dodgerblue 180MB
+          span 의 가벼운 용량과
+        p.titleMsg.right(style="font-size:25px") 
+          span.dodgerblue electron
+          span 으로 구현된 가벼운 무게로
+        p.titleMsg.right(style="font-size:25px") 지금 당장 사용할수 있습니다.
+      .images2 
+        p.subMsg2 Functions of AZC
+        img.screen2(src='/images/2.png' alt='screenImg')
+        p
+          a.download_btn_2(href='/release/1.4.0/auto_zoom_connector_1.4.0.zip' download) DOWNLOAD NOW
+  .main3
+    span(style="font-size: 45px;") AZC - Auto 
+      span(style="color:black;") Zoom 
+      span Connector
+    br
+    p
+      a.download_btn.bg_white(href='/release/1.4.0/auto_zoom_connector_1.4.0.zip' download) 지금 다운로드하세요
