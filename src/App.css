@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap");
+
+html,
+body {
+  font-size: 62.5%;
+  line-height: 1.285;
+}
+
+.strong {
+  /* 더 굵게 설정하기 */
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+}
+h1 {
+  font-size: 30px;
+}
+
+body {
+  padding: 5rem;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  color: #00b7ff;
+  text-decoration: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.data {
+  background-color: transparent;
+  width: 6rem;
+  border: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.copy {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #00b7ff;
+}
+
+.delete {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+  color: rgb(255, 55, 55);
+}
+
+.create {
+  display: inline-block;
+  background-color: #00b7ff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 100px;
+  position: relative;
+  color: whitesmoke;
+}
+.create::before {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.create:focus::before {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  width: 10rem;
+  height: 10rem;
+  margin-top: -5rem;
+  margin-left: -5rem;
+}
+.create:hover {
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+.create_id {
+  width: 5rem;
+  text-align: center;
+  border: none;
+}
+.create_input {
+  width: 20rem;
+  text-align: center;
+  border: none;
+}
+.create_complate {
+  display: inline-block;
+  background-color: #00b7ff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 1rem;
+  position: relative;
+  color: whitesmoke;
+}
+.create_complate::before {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+}
+.create_complate:focus::before {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  width: 10rem;
+  height: 10rem;
+  margin-top: -5rem;
+  margin-left: -5rem;
+}
+.create_complate:hover {
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.create_back {
+  display: inline-block;
+  background-color: #000;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 1rem;
+  position: relative;
+  color: whitesmoke;
+}
+.create_back::before {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+}
+.create_back:focus::before {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  width: 10rem;
+  height: 10rem;
+  margin-top: -5rem;
+  margin-left: -5rem;
+}
+.create_back:hover {
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+/* 복사 스낵바 */
+
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 25rem; /* Set a default minimum width */
+  margin-left: -12.5rem; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 0.2rem; /* Rounded borders */
+  padding: 1.6rem; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 3rem; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 3rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 3rem;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 3rem;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 3rem;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
